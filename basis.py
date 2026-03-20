@@ -86,7 +86,7 @@ def get_pending_count():
         return response.json()
     except requests.exceptions.RequestException as e:
         print(f"[ERROR] Failed to get pending count: {e}")
-        print(f"[ERROR] Response text: {e.response.text if e.response else "N/A"}")
+        print(f"[ERROR] Response text: {e.response.text if e.response else 'N/A'}")
         return None
 
 
@@ -113,7 +113,7 @@ def place_order(coin, side, quantity, price = None):
         return response.json()
     except requests.exceptions.RequestException as e:
         print(f"[ERROR] Failed to place order: {e}")
-        print(f"Response text: {e.response.text if e.response else "N/A"}")
+        print(f"Response text: {e.response.text if e.response else 'N/A'}")
         return None
 
 
@@ -133,7 +133,7 @@ def cancel_order():
         return response.json()
     except requests.exceptions.RequestException as e:
         print(f"[ERROR] Failed to cancel order: {e}")
-        print(f"Response text: {e.response.text if e.response else "N/A"}")
+        print(f"Response text: {e.response.text if e.response else 'N/A'}")
         return None
 
 
@@ -151,7 +151,7 @@ def query_order():
         return response.json()
     except requests.exceptions.RequestException as e:
         print(f"[ERROR] Failed to query order: {e}")
-        print(f"Response text: {e.response.text if e.response else "N/A"}")
+        print(f"Response text: {e.response.text if e.response else 'N/A'}")
         return None
 
 
