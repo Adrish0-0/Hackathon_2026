@@ -235,7 +235,7 @@ class RSITradingStrategy:
         trend = self._get_price_trend()
         divergence = self.rsi_calculator.is_divergence(trend)
         
-        status = (f"Price: ${price:,.2f} | RSI: {rsi:.1f} | Trend: {trend} | Position: {"LONG" if self.position else "FLAT"}")
+        status = (f"Price: ${price:,.2f} | RSI: {rsi:.1f} | Trend: {trend} | Position: {'LONG' if self.position else 'FLAT'}")
         logging.info(status)
         
         risk_signal = self._check_risk_limits(price)
