@@ -123,7 +123,7 @@ class HistoryRSI:
             
             if len(prices) >= hours:
                 logging.info(f"Donwloaded {len(prices)} hours of data (using last {hours})")
-                return prices[-hours:]
+                return prices[-(hours * 60):]
             else:
                 logging.info(f"Downloaded {len(prices)} hours of data")
                 return prices
@@ -189,9 +189,9 @@ class RSITradingStrategy:
             return "NEUTRAL"
         recent = list(self.price_history)[-lookback:]
         change_pct = (recent[-1] - recent[0]) / recent[0]
-        if change_pct > 0.02:
+        if change_pct > 0.005:
             return "UP"
-        elif change_pct < -0.02:
+        elif change_pct < -0.005:
             return "DOWN" 
         return "SIDEWAYS"
     
