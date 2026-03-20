@@ -348,12 +348,13 @@ class RSITradingBot:
     
     
     def _execute_trade(self, side, price):
-        order = place_order(self.pair, side, self.trade_quantity)
+        order = place_order(self.coin, side, self.trade_quantity)
         if order:
-            logging.info(f"{side} executed")
+            logging.info(f"{side} executed: {order}")
             return True
-        logging.error(f"{side} failed")
-        return False
+        else:
+            logging.error(f"{side} failed")
+            return False
     
     
     def run_cycle(self):
