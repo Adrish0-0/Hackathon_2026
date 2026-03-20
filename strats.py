@@ -379,7 +379,7 @@ class RSITradingBot:
         else:
             if self.cycle_count % 10 == 0:
                 status = self.strategy.get_status()
-                logging.info(f"Status: {status["position"]} | RSI: {rsi:.1f} | P&L {status["total_pnl_pct"]:+.2f}%")
+                logging.info(f"Status: {status['position']} | RSI: {rsi:.1f} | P&L {status['total_pnl_pct']:+.2f}%")
     
     
     def run(self):
