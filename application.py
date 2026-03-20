@@ -18,7 +18,7 @@ logging.basicConfig(
 if __name__ == "__main__":
     bot = RSITradingBot(
         coin = "BTC",
-        trade_quantity = 0.001,
+        trade_quantity = 0.05,
     )
     
     bot.run()
