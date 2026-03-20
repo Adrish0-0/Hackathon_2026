@@ -69,7 +69,7 @@ def get_balance():
         return response.json()
     except requests.exceptions.RequestException as e:
         print(f"[ERROR] Failed to get balance: {e}")
-        print(f"[ERROR] Response text: {e.response.text if e.response else "N/A"}")
+        print(f"[ERROR] Response text: {e.response.text if e.response else 'N/A'}")
         return None
 
 
