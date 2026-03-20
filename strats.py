@@ -300,7 +300,7 @@ class RSITradingStrategy:
             self.consecutive_signals = 0
             pnl = (price - self.entry_price) / self.entry_price * 100
             self.total_pnl += pnl
-            return "SELL", f"{" | ".join(sell_conditions)} | P&L: {pnl:+.2f}%", rsi
+            return "SELL", f"{' | '.join(sell_conditions)} | P&L: {pnl:+.2f}%", rsi
         
         if not buy_conditions and not sell_conditions:
             self.consecutive_signals = 0
