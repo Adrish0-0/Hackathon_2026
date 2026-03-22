@@ -362,9 +362,14 @@ class RSITradingBot:
         current_time = time.time()
         
         response = get_ticker(self.pair)
-        if response and "LastPrice" in response["Data"][self.pair]:
+
+        if (response and 
+            isinstance(response.get("Data"), dict) and 
+            self.pair in response["Data"] and 
+            "LastPrice" in response["Data"][self.pair]):
             price = float(response["Data"][self.pair]["LastPrice"])
         else:
+            logging.error(f"Invalid ticker response: {response}")
             return
         
         signal, reason, rsi = self.strategy.generate_signal(price, current_time)
