@@ -4,8 +4,8 @@ import requests
 import time
 
 
-API_KEY = "9eoh9Mb0vdGOaIgFauoB5BsuNDlxPDixJOZUee5vwEgjMqcyevIAyBmWRsCL285X"
-API_SECRET = "FPvzVFsVfBxLX8OSnOiIVxbc2VkDhkkeUYf4wIOcU7VAqhx1VXJzWNCYv0Z1UkeT"
+API_KEY = "vgjlBn3s7DC2L7JmO9BDzYEWsaQDPdgsyRrycfAryMe1okKpkVmTRVzdctzbPmJs"
+API_SECRET = "QxytheWu8sVDeaMhJw51rZfQKhcaLSUbLnjqpfxb5NK9ZLQUkeKJVlZkk7ScnEeo"
 
 BASE_URL = "https://mock-api.roostoo.com"
 
